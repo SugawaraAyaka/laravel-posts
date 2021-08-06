@@ -11,20 +11,22 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('users')->insert([
-            'name' => 'Sugawara Ayaka',
-            'email' => 'Ayaka@gmai.com',
-            'password' => Hash::make('ayaka0000')
-        ]);
-        \DB::table('users')->insert([
-            'name' => 'Yamada tarou',
-            'email' => 'yamada@gmai.com',
-            'password' => Hash::make('yamada0000'),
-        ]);
-        \DB::table('users')->insert([
-            'name' => 'Hanako',
-            'email' => 'Hanako@gmai.com',
-            'password' => Hash::make('Hanako0000'),
+        DB::table('users')->insert([
+            [
+                'name' => 'Sugawara Ayaka',
+                'email' => 'ayaka@gmail.com',
+                'password' => Hash::make('ayaka0000')
+            ],
+            [
+                'name' => 'Yamada tarou',
+                'email' => 'yamada@gmail.com',
+                'password' => Hash::make('yamada0000')
+            ],
+            [
+                'name' => 'Hanako',
+                'email' => 'hanako@gmail.com',
+                'password' => Hash::make('Hanako0000')
+            ]
         ]);
     }
 }
