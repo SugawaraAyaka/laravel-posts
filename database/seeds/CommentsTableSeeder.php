@@ -46,7 +46,7 @@ class CommentsTableSeeder extends Seeder
                 'content' => 'コメント5',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
-                ]
+            ]
         ]);
     }
 }
