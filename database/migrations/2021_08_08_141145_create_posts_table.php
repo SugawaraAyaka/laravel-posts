@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned()->index();
             $table->text('title');
-            $table->text('message');
+            $table->text('content');
             $table->timestamps();
             
             //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
