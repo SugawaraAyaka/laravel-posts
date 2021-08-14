@@ -34,7 +34,7 @@ class PostTableSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'user_id' => 4,
+                'user_id' => 3,
                 'title' => 'タイトル4',
                 'message' => '本文4',
                 'created_at' => date('Y-m-d H:i:s'),
