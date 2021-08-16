@@ -13,3 +13,4 @@
 
 
 Route::get('/', 'PostsController@index')->name('posts.index'); 
+Route::post('/comments/store', 'CommentsController@store')->name('comments.store');
