@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mt-5">
         <div class="card col-sm-8 m-auto">
-            <div class="form-wrap col-xs-6 col-lg-4 m-auto">
+            <div class="form-wrap col-xs-8 col-lg-6 m-auto">
                 <div class="form-group text-center mb-0">
                     <h2 class="logo-img mx-auto font-weight-bold mb-5 mt-5">新規登録</h2>
                 </div>
