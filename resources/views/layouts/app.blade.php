@@ -19,9 +19,7 @@
                     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         </head>
         <body>
-            {{-- @yield()
-            @yield()
-            @yield() --}}
+            @yield('content')
 
             <!-- JQuery -->
             <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('content')
 <div class="container mt-5">
         <div class="card col-sm-8 m-auto">
             <div class="form-wrap col-xs-6 col-lg-4 m-auto">
