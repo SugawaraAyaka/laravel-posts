@@ -6,8 +6,8 @@
                 <div class="form-group text-center mb-0">
                     <h2 class="logo-img mx-auto font-weight-bold mb-5 mt-5">新規登録</h2>
                 </div>
-                {!! Form::token() !!}
                 {!! Form::open(['route' => 'signup.post']) !!}
+                    {!! Form::token() !!}
                     <div class="form-group col-mb-8">
                         <div class="form mb-3">
                         {!! Form::email('email', old('email'), ['class' => 'form-control','placeholder' => 'メールアドレス']) !!}
