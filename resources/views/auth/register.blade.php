@@ -6,7 +6,7 @@
                 <div class="form-group text-center mb-0">
                     <h2 class="logo-img mx-auto font-weight-bold mb-5 mt-5">新規登録</h2>
                 </div>
-            @csrf
+                {!! Form::token() !!}
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <div class="form-group col-mb-8">
                         <div class="form mb-3">
@@ -32,5 +32,6 @@
             </div>
         </div>
 </div>
+@endsection
 
 
