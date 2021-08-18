@@ -8,12 +8,12 @@ use App\User;
 
 class UsersController extends Controller
 {
-     public function index()
+    
+    public function edit(Request $request)
     {
         
-        return view('welcome', [
-            'users' => $users,
-        ]);
+        $user = User::find($id);
+        return view('users.edit', compact('user'));
     }
     
     public function update(Request $request, $id)
