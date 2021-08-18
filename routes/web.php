@@ -11,5 +11,9 @@
 |
 */
 
+Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup');
+Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
+Route::get('/', 'PostsController@index')->name('posts.index');
 
-Route::get('/', 'PostsController@index')->name('posts.index'); 
+Route::get('edit/{id}', 'UsersController@edit')->name('users.edit');
+Route::post('update/{id}', 'UsersController@update')->name('users.update');
