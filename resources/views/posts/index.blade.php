@@ -35,6 +35,10 @@
                     {{ $post->message }}
                 </div>
                 <div class="m-4">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
                 @include('comments.comment_create')
 @endforeach
