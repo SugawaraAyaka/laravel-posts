@@ -11,8 +11,8 @@ class UsersController extends Controller
     
     public function edit(Request $request)
     {
-        
         $user = User::find($id);
+        
         return view('users.edit', compact('user'));
     }
     
