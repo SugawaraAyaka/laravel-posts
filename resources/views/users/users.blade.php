@@ -1,20 +1,24 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="col-md-offset-2 mb-1 edit-profile-wrapper">
     <div class="row">
         <div class="col-md-8 mx-auto">
            エラー表示部分
         　　<div class="profile-form-wrap">
-                <form class="edit_user" enctype="multipart/form-data" action="/users/update" accept-charset="UTF-8" method="post">
+                <form class="edit_user" enctype="multipart/form-data" action="{{('users.update',[users,users])}}" accept-charset="UTF-8" method="post">
                     <input name="utf8" type="hidden" value="&#x2713;" />
-                    <input type="hidden" name="id" value="" />
+                    <input type="hidden" name="id" value="{{$users->id}}" />
                     {{csrf_field()}}
                         <div class="form-group">
                             <label for="name">ユーザー名</label>
-                                <input autofocus="autofocus" class="form-control" value="" name="name" />
+                                <input autofocus="autofocus" class="form-control" value="{{$users->name}}" name="name" />
                         </div>
 
                         <div class="form-group">
                             <label for="email">メールアドレス</label>
-                                <input autofocus="autofocus" class="form-control" value="" name="email" />
+                                <input autofocus="autofocus" class="form-control" value="{{$users->email}}" name="email" />
                         </div>
 
                         <div class="form-group">
@@ -35,3 +39,5 @@
             </div>
         </div>
     </div>
+    
+@endsection
