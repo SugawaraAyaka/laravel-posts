@@ -1,3 +1,27 @@
+<span class="help-block">
+  エラー表示位置
+</span>
+    <div class="container mt-4">
+        <div class="border-top p-1">
+
+        @foreach($post->comment as $comment)
+
+            <span>
+                <strong>
+                    <a class="no-text-decoration black-color" href="">
+                    {{ $comment->user->name }}
+                    </a>
+                </strong>
+            </span>
+            <div class="comments mt-1">
+                <span>
+                {{ $comment->content }}
+                </span>
+            </div>
+        @endforeach
+        </div>
+    </div>
+
 <form class="w-100" action="{{ route('comments.store')}}" method="post">
         {{ csrf_field() }}
             <input name="utf8" type="hidden" value=""/>
