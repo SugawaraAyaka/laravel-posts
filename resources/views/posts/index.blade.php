@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="jumbotron">
     <h1 class="display-4 text-center">Laravel Post <i class="fas fa-mail-bulk"></i></h1>
 </div>
@@ -35,10 +39,13 @@
                     {{ $post->message }}
                 </div>
                 <div class="m-4">
+                @include('comments.comment_create')
                 </div>
             </div>
         </div>
     </div>
 </div>
-                @include('comments.comment_create')
+                
 @endforeach
+
+@endsection

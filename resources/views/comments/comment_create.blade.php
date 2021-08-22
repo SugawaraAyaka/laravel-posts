@@ -2,13 +2,16 @@
   エラー表示位置
 </span>
     <div class="container mt-4">
-        <div class="border-top p-1">
 
-        @foreach($post->comment as $comment)
+    @foreach($post->comment as $comment)
+
+        <div class="border-top p-1 mb-3">
+
+        
 
             <span>
                 <strong>
-                    <a class="no-text-decoration black-color" href="">
+                    <a class="no-text-decoration black-color " href="">
                     {{ $comment->user->name }}
                     </a>
                 </strong>
@@ -18,8 +21,8 @@
                 {{ $comment->content }}
                 </span>
             </div>
-        @endforeach
         </div>
+    @endforeach
     </div>
 
 <form class="w-100" action="{{ route('comments.store')}}" method="post">
