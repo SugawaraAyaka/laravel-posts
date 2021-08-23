@@ -3,27 +3,7 @@
 </span>
     <div class="container mt-4">
 
-    @foreach($post->comment as $comment)
-
-        <div class="border-top p-1 mb-3">
-
-        
-
-            <span>
-                <strong>
-                    <a class="no-text-decoration black-color " href="">
-                    {{ $comment->user->name }}
-                    </a>
-                </strong>
-            </span>
-            <div class="comments mt-1">
-                <span>
-                {{ $comment->content }}
-                </span>
-            </div>
-        </div>
-    @endforeach
-    </div>
+    @include('comments.comment_show')
 
 <form class="w-100" action="{{ route('comments.store')}}" method="post">
         {{ csrf_field() }}
