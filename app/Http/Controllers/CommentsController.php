@@ -16,6 +16,6 @@ class CommentsController extends Controller
         $content->content = $request->content[$request->post_id];
         $content->save();
 
-        return redirct('/');
+        return redirect('/');
     }
 }
