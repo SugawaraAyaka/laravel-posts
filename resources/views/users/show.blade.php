@@ -9,10 +9,11 @@
                 <div class="col-12">
                     <p>{{ $user->email }}</p>
                 </div>
-                @if(Auth::id()===$user->id)
+                @if (Auth::id() === $user->id)
                 <div class="col-12 mt-3">
                     <a class="btn btn-outline-dark common-btn btn-sm edit-profile-btn" href="/users/edit"><i class="fas fa-user-edit"></i>プロフィール編集</a>
-                    <a class="btn btn-outline-dark common-btn btn-sm edit-profile-btn" rel="nofollow" data-method="POST" href=""><i class="fas fa-cog"></i>ログアウト</a>
+                    <p class="btn btn-outline-dark common-btn btn-sm edit-profile-btn">{!! link_to_route('logout', 'ログアウト',[],['class' => 'fas fa-cog text-dark']) !!}</p>
+
                     <form id="logout-form" action="" method="POST" style="display: none;">{{ csrf_field() }}
                     </form>
                 </div>
