@@ -10,7 +10,7 @@
   エラー表示箇所
 </div>
 
-@foreach ($posts as $post) 
+@foreach ($posts as $post)
 
 <div class="col-md-8 col-md-2 mx-auto">
     <div class="card-wrap">
