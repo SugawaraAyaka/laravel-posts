@@ -19,4 +19,6 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('user/{id}', 'UsersController@show')->name('users.show');
+    Route::get('posts', 'PostsController@create')->name('posts.create.');
+    Route::post('posts', 'PostsController@store')->name('posts.create.');
 });
