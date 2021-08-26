@@ -27,8 +27,9 @@
                             <input type="submit" name="commit" value="投稿する" class="btn btn-primary w-25" data-disable-with="投稿する"/>
                         </div>
                     </form>
+                </div>
             </div>
         </div>
-     </div>
+    </div>
 </div>
 @endsection
