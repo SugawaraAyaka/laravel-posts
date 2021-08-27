@@ -16,9 +16,9 @@ Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 Route::get('/', 'PostsController@index')->name('posts.index');
 
 Route::get('posts/{id}/edit', 'PostsController@edit')->name('post.edit');
-Route::put('posts/{id}', 'PostsController@update')->name('post.update');
+Route::post('posts/{id}', 'PostsController@update')->name('post.update');
 Route::delete('posts/{id}', 'PostsController@destroy')->name('post.destroy');
 
 Route::get('users/{users}/edit', 'UsersController@edit')->name('users.edit');
-Route::put('users/{users}', 'UsersController@update')->name('users.update');
+Route::post('users/{users}', 'UsersController@update')->name('users.update');
 

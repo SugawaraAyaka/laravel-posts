@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="jumbotron">
     <h1 class="display-4 text-center">Laravel Post <i class="fas fa-mail-bulk"></i></h1>
 </div>
@@ -6,7 +10,7 @@
   エラー表示箇所
 </div>
 
-@foreach ($posts as $post) 
+@foreach ($posts as $post)
 
 <div class="col-md-8 col-md-2 mx-auto">
     <div class="card-wrap">
@@ -23,9 +27,9 @@
             </div>
             <div class="card-body">
                 <div class="post_edit text-right">
-                    <a class="btn btn-primary btn-sm" href=""><i class="far fa-edit"></i>編集
+                    <a class="btn btn-primary btn-sm" href="https://582be640434c4cfe9836718d4cf95811.vfs.cloud9.us-east-2.amazonaws.com/posts/{id}/edit"><i class="far fa-edit"></i>編集
                     </a>
-                    <a class="btn btn-danger btn-sm" rel="nofollow" href=""><i class="far fa-trash-alt"></i>削除
+                    <a class="btn btn-danger btn-sm" rel="nofollow" href="https://582be640434c4cfe9836718d4cf95811.vfs.cloud9.us-east-2.amazonaws.com/posts/{id}"><i class="far fa-trash-alt"></i>削除
                     </a>
                 </div>
                 <h3 class="h5 title">
@@ -34,6 +38,14 @@
                 <div class="mb-5">
                     {{ $post->message }}
                 </div>
+                {{-- <div class="m-4"> 
+                    @include('comments.comment_create') --}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 
-
 @endforeach
+
+@endsection

@@ -7,7 +7,14 @@ use App\Post;
 
 class PostsController extends Controller
 {
-    public function edit(Post $post)
+    
+    public function index()
+    {
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        
+        return view('posts.index', ['posts' => $posts]);
+    }
+    public function edit(Post $post,$id)
     {
         $post = Post::findOrFail($id);
         
@@ -21,15 +28,14 @@ class PostsController extends Controller
         $post->message = $request->input('message');
         $post->save();
 
-        return redirect('/');
+        return redirect('post/index');
     }
     public function destroy($id)
     {
-         $user = Post::findOrFail($id);
-         if (\Auth::id() == $post->user_id) {
-             $post->delete();
-         }
-         return redirect('/');
+         $post = Post::findOrFail($id);
+         $post->delete();
+         
+         return redirect('post/index');
     }
 }
 

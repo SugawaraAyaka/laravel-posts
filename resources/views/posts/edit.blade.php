@@ -14,7 +14,7 @@
         <form class="upload" id="new_post" enctype="multipart/form-data" action="{{route('posts.update',$post->id)}}"accept-charset="UTF-8" method="POST">
            {{csrf_field()}}
             <div class="md-form">
-                <input class="form-control" placeholder="タイトル" type="text" name="title" value="{{$post->title}}"/>
+                <input class="form-control" placeholder="タイトル" type="text" name="title" value=" value="{{ old('title') ?? $post->title }}/>
             </div>
             <div class="form-group">
                 <textarea name="body" class="form-control" rows="10" placeholder="本文"></textarea>
