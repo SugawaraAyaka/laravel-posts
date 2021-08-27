@@ -1,5 +1,5 @@
 <span class="help-block">
-  エラー表示位置
+  @include('commons.error')
 </span>
     <div class="container mt-4">
 
