@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-header">投稿の新規作成</div>
                 <div class="card-body">
-                    <form class="upload" id="new_post" enctype="multipart/form-data" action="" accept-charset="UTF-8" method="POST">
+                    <form class="upload" id="new_post" enctype="multipart/form-data" action="{{ route('posts.store') }}" accept-charset="UTF-8" method="POST">
                     {{csrf_field()}}
                         <div class="md-form">
                             <input class="form-control" placeholder="タイトル" name="title" value=""/>
@@ -27,6 +27,7 @@
                             <input type="submit" name="commit" value="投稿する" class="btn btn-primary w-25" data-disable-with="投稿する"/>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
