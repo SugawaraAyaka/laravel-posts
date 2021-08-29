@@ -32,7 +32,7 @@ class PostsController extends Controller
         $post->user_id = \Auth::id();
         $post->save();
 
-        return view('posts.create');
+        return redirect()->route('posts.index');
     }
 
 
