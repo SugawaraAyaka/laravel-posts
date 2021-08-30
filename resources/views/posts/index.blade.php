@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-md-8 col-md-2 mx-auto">
-  エラー表示箇所
+  @include('commons.error')
 </div>
 
 @foreach ($posts as $post)
