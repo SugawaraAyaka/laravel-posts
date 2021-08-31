@@ -1,9 +1,13 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="jumbotron">
     <h1 class="display-4 text-center">Laravel Post <i class="fas fa-mail-bulk"></i></h1>
 </div>
 
 <div class="col-md-8 col-md-2 mx-auto">
-  エラー表示箇所
+  @include('commons.error')
 </div>
 
 @foreach ($posts as $post)
@@ -34,6 +38,14 @@
                 <div class="mb-5">
                     {{ $post->message }}
                 </div>
-
-
+                <div class="m-4">
+                @include('comments.comment_create')
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                
 @endforeach
+
+@endsection

@@ -11,9 +11,14 @@
 |
 */
 
+Route::group(['middleware' => 'auth'], function() {
+  Route::post('/comments/store', 'CommentsController@store')->name('comments.store');
+  Route::get('/', 'PostsController@index')->name('posts.index');
+  Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+  Route::get('user/{id}', 'UsersController@show')->name('users.show');
+});
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
-Route::get('/', 'PostsController@index')->name('posts.index');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
@@ -22,3 +27,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('post/new', 'PostsController@create')->name('posts.create.');
     Route::post('post', 'PostsController@store')->name('posts.store');
 });
+
