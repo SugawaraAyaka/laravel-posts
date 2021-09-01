@@ -27,9 +27,9 @@
             </div>
             <div class="card-body">
                 <div class="post_edit text-right">
-                    <a class="btn btn-primary btn-sm" href="https://582be640434c4cfe9836718d4cf95811.vfs.cloud9.us-east-2.amazonaws.com/posts/{id}/edit"><i class="far fa-edit"></i>編集
+                    <a class="btn btn-primary btn-sm" href="{{ route('post.edit',['id' => $post->id ]) }}"><i class="far fa-edit"></i>編集
                     </a>
-                    <a class="btn btn-danger btn-sm" rel="nofollow" href="https://582be640434c4cfe9836718d4cf95811.vfs.cloud9.us-east-2.amazonaws.com/posts/{id}"><i class="far fa-trash-alt"></i>削除
+                    <a class="btn btn-danger btn-sm" rel="nofollow" href="{{ route('post.destroy',['id' => $post->id ]) }}"><i class="far fa-trash-alt"></i>削除
                     </a>
                 </div>
                 <h3 class="h5 title">
