@@ -9,7 +9,13 @@ use App\User;
 class UsersController extends Controller
 {
     
-    public function edit(Request $request,$id)
+   
+     public function show($id)
+    {
+        $user = User::findOrFail($id);
+        return view('users.show', compact('user'));
+    }
+     public function edit(Request $request,$id)
     {
         $user = User::find($id);
         

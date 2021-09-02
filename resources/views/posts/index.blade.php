@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-md-8 col-md-2 mx-auto">
-  エラー表示箇所
+  @include('commons.error')
 </div>
 
 @foreach ($posts as $post)
@@ -27,9 +27,12 @@
             </div>
             <div class="card-body">
                 <div class="post_edit text-right">
-                    <a class="btn btn-primary btn-sm" href="{{ route('post.edit',['id' => $post->id ]) }}"><i class="far fa-edit"></i>編集
+                    <a class="btn btn-primary btn-sm" 
+                        href="{{ route('post.edit',['id' => $post->id ]) }}"><i class="far fa-edit"></i>編集
                     </a>
-                    <a class="btn btn-danger btn-sm" rel="nofollow" href="{{ route('post.destroy',['id' => $post->id ]) }}"><i class="far fa-trash-alt"></i>削除
+                    <a class="btn btn-danger btn-sm" rel="nofollow"
+                        href="{{ route('post.destroy', ['id' => $post->id]) }}">
+                        <i class=" far fa-trash-alt"></i>削除
                     </a>
                 </div>
                 <h3 class="h5 title">
@@ -38,8 +41,9 @@
                 <div class="mb-5">
                     {{ $post->message }}
                 </div>
-                {{-- <div class="m-4"> 
-                    @include('comments.comment_create') --}}
+                
+                <div class="m-4">
+                @include('comments.comment_create')
                 </div>
             </div>
         </div>

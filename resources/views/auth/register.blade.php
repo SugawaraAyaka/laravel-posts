@@ -28,7 +28,7 @@
                 {!! Form::close() !!}
                 <br>
             </div>
-                <p class="fs-6 devise-link text-center">アカウントを既にお持ちの場合⇨<a href="/login">ログインする</a></p>
+                <p class="fs-6 devise-link text-center">アカウントを既にお持ちの場合⇨{!! link_to_route('login', 'ログインする') !!}
             </div>
         </div>
 </div>
