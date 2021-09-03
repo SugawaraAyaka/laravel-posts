@@ -41,6 +41,7 @@ class PostsController extends Controller
         
         return view('posts.edit', compact('post'));
     }
+    
     public function update(Request $request, $id)
     {
         $post = Post::findOrFail($id);
@@ -51,6 +52,7 @@ class PostsController extends Controller
 
         return redirect('/');
     }
+    
     public function destroy($id)
     {
          $post = Post::findOrFail($id);

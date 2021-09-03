@@ -15,6 +15,7 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         return view('users.show', compact('user'));
     }
+    
      public function edit(Request $request,$id)
     {
         $user = User::find($id);
